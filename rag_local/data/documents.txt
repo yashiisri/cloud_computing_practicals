@@ -1,0 +1,5 @@
+The sun is a star.
+Cats are mammals.
+Paris is the capital of France.
+Python is a programming language.
+RAG stands for Retrieval-Augmented Generation.

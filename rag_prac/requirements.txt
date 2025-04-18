@@ -1,0 +1,5 @@
+boto3
+awscli
+botocore
+pypdf
+langchain_community
