@@ -1,10 +1,15 @@
 import openai
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Azure OpenAI credentials
-openai.api_type = "azure"
-openai.api_key = "9brWImpH0k4AQWp9jiLAZHKUKPItW1K4x0yvmt4b6HEpf5vRRkPpJQQJ99BDACqBBLyXJ3w3AAABACOGRrE1"
-openai.api_base = "https://yashiii.openai.azure.com/"
-openai.api_version = "2023-12-01-preview"  # or check your Azure version
+openai.api_type = os.getenv("OPENAI_API_TYPE")
+openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_base = os.getenv("OPENAI_API_BASE")
+openai.api_version = os.getenv("OPENAI_API_VERSION")
 
 # Use ChatCompletion (for GPT-3.5, GPT-4, etc.)
 response = openai.ChatCompletion.create(
